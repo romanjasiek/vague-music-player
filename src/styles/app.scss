@@ -1,0 +1,9 @@
+// Removing some default stylings from every element
+@import "./song";
+@import "./player";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
