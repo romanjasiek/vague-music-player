@@ -1,8 +1,8 @@
 import React from 'react';
 
 const LibrarySong = ({  song, songs, setCurrentSong, id, audioRef, isPlaying, setSongs }) => {
-    const songSelectHandler = () => {
-        setCurrentSong(song); // Checking if the thing we click on equals to some item in our songs database
+    const songSelectHandler = async () => {
+        await setCurrentSong(song); // Checking if the thing we click on equals to some item in our songs database
         // setCurrentSong(selectedSong[0]);
 
         // Set active state
@@ -20,18 +20,9 @@ const LibrarySong = ({  song, songs, setCurrentSong, id, audioRef, isPlaying, se
             }
         })
         setSongs(newSongs);
-
-        audioRef.current.play();
         // Check if song is playing
-        if(isPlaying) {
-            const playPromise = audioRef.current.play();
-            if(playPromise !== undefined){
-                playPromise.then((audio) => {
-                    audioRef.current.play();
-                })
-            }
-        }
-    }
+        if(isPlaying) audioRef.current.play();
+    };
 
     return(
         <div onClick={songSelectHandler} className={`library-song ${song.active ? 'selected' : ""}`} >
