@@ -1,9 +1,12 @@
 @use "./variables" as *;
-// Removing some default stylings from every element
+
 @import "./song";
 @import "./player";
 @import "./library";
+@import "./fonts";
+@import "./nav";
 
+// Removing some default stylings from every element
 * {
     margin: 0;
     padding: 0;

@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "sass:math";
+
 $color-primary: rgb(233, 196, 106)!default;
+$color-primary-dark: color.scale($color-primary, $lightness: -20%)!default;
 $color-secondary: #555555!default;
 $color-default-lightgray: #fefefe!default;

@@ -1,114 +1,225 @@
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
+import SleepyFish from './music/sleepy-fish_rest-until-dark/sleepy-fish_rest-until-dark.mp3';
+import SleepyFishCover from './music/sleepy-fish_rest-until-dark/sleepy-fish_rest-until-dark.jpg';
+import Nightdrive from './music/ak_nightdrive/night-drive-ak-main-version-04-09-1328.mp3';
+import NightdriveCover from './music/ak_nightdrive/AK_Avatar_3032648670472391.jpg';
+import ClearSky from './music/hartzmann_clearsky/clear-sky-hartzmann-main-version-02-20-18592.mp3';
+import ClearSkyCover from './music/hartzmann_clearsky/Hartzmann_Avatar_6691536139022807.jpg';
+import BigDreams from './music/simon-folwar_big-dreams/big-dreams-simon-folwar-main-version-02-25-18020.mp3';
+import BigDreamsCover from './music/simon-folwar_big-dreams/simon-folwar-avatar-v1_2079212815531580.jpg';
+import Babel from './music/zayner-babel/babel-zayner-main-version-04-00-2158.mp3';
+import BabelCover from './music/zayner-babel/zayner-avatar-v1_4284495953502456.jpg';
+import AdventureIsCalling from './music/vens-adams_adventure-is-calling/adventure-is-calling-vens-adams-main-version-02-02-31.mp3';
+import AdventureIsCallingCover from './music/vens-adams_adventure-is-calling/vens-adams-avatar-v1_1721782353768003.jpg';
+import Seascape from './music/mazko-seascape/mazko-seascape.mp3';
+import SeascapeCover from './music/mazko-seascape/mazko-seascape.jpg';
+import Daydream from './music/aiguille/aiguille-daydream.mp3';
+import Nightfall from './music/aiguille/aiguille-nightfall.mp3';
+import DaydreamCover from './music/aiguille/aiguille-daydream.jpg';
+import KeepGoing from './music/sworn/sworn_keep-going.mp3';
+import Reflection from './music/sworn/sworn_reflection.mp3';
+import SwornCover from './music/sworn/sworn.jpg';
+import Wayfare from './music/the-kount_mazko/the-kount_mazko_wayfare.mp3';
+import WayfareCover from './music/the-kount_mazko/the-kount_mazko_wayfare.jpg';
+import NewHorizon from './music/nymano_epektase/nymano_epektase_new-horizon.mp3';
+import NewHorizonCover from './music/nymano_epektase/nymano_epektase_new-horizon.jpg';
+import TodayFeelsLikeEveryday from './music/mama-aiuto/mama-aiuto_today-feels-like-everyday.mp3';
+import TodayFeelsLikeEverydayCover from './music/mama-aiuto/mama-aiuto-today-feels-like-everyday.jpg';
+import VHSTapes from './music/edapollo_sundreamer/edapollo_sundreamer-vhs-tapes-1993-1996.mp3';
+import VHSTapesCover from './music/edapollo_sundreamer/edapollo_sundreamer-vhs-tapes-1993-1996.jpg';
+import OceanView from './music/g-mills_kyle-mcevoy_lukeotwell/g-mills_kyle-mcevoy_lukeotwell-ocean-view.mp3';
+import OceanViewCover from './music/g-mills_kyle-mcevoy_lukeotwell/g-mills_kyle-mcevoy_lukeotwell-ocean-view.jpg';
+import UnderTheCityStars from './music/aso_middle-school_aviino/aso_middle-school_aviino_under-the-city-stars.mp3';
+import UnderTheCityStarsCover from './music/aso_middle-school_aviino/aso_middle-school_aviino_under-the-city-stars.jpg';
 
 function chillHop() {
     return [
         {
             name: "Rest Until Dark",
-            cover: "https://chillhop.com/wp-content/uploads/2020/09/c209a7df7b9bc133dfff73ce86ebc3c57c2b73dd-1024x1024.jpg",
+            cover: SleepyFishCover,
             artist: "Sleepy Fish",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=10015",
+            credits: "Credits: Sleepy Fish - Rest Until Dark",
+            link: "https://chll.to/4280d68a",
+            audio: SleepyFish,
             color: ['#F1E2C6','#39A1BC'],
             id: uuidv4(),
             active: true
         },
         {
+            name: "Nightdrive",
+            cover: NightdriveCover,
+            artist: "AK",
+            credits: "Credits: Music from Uppbeat (free for Creators!). License code: FFEZZKHNHD1PSTEI",
+            link: "https://uppbeat.io/t/ak/night-drive",
+            audio: Nightdrive,
+            color: ['#A0988F','#5D6862'],
+            id: uuidv4(),
+            active: false
+        },
+        {
             name: "Seascape",
-            cover: "https://chillhop.com/wp-content/uploads/2020/11/f78c39b4bb6313ddd0354bef896c591bfb490ff8-1024x1024.jpg",
+            cover: SeascapeCover,
             artist: "Makzo",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=11773",
+            credits: "Credits: Makzo - Seascape",
+            link: "https://chll.to/385f1eec",
+            audio: Seascape,
             color: ['#6072AD','#E9866E'],
             id: uuidv4(),
             active: false
         },
         {
-            name: "Daylight",
-            cover: "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+            name: "Babel",
+            cover: BabelCover,
+            artist: "Zayner",
+            credits: "Credits: Music from Uppbeat (free for Creators!). License code: 9JNPQK6KHA733TRS",
+            link: "https://uppbeat.io/t/zayner/babel",
+            audio: Babel,
+            color: ['#6072AD','#EEB99F'],
+            id: uuidv4(),
+            active: false
+        },
+        {
+            name: "Clear Sky",
+            cover: ClearSkyCover,
+            artist: "Hartzmann",
+            credits: "Credits: Music from Uppbeat (free for Creators!). License code: 2D8RFKI6HJIKVU8E",
+            link: "https://uppbeat.io/t/hartzmann/clear-sky",
+            audio: ClearSky,
+            color: ['#FB269F','#3B23A3'],
+            id: uuidv4(),
+            active: false
+        },
+        {
+            name: "Daydream",
+            cover: DaydreamCover,
             artist: "Aiguille",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
+            credits: "Credits: Aiguille - Daydream",
+            link: "https://chll.to/4936a39e",
+            audio: Daydream,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
         },
         {
+            name: "Big Dreams",
+            cover: BigDreamsCover,
+            artist: "Simon Folwar",
+            credits: "Credits: Music from Uppbeat (free for Creators!). License code: J9CJXAWJXXF5VSMW",
+            link: "https://uppbeat.io/t/simon-folwar/big-dreams",
+            audio: BigDreams,
+            color: ['#3E7D80','#E47663'],
+            id: uuidv4(),
+            active: false
+        },
+        {
             name: "Keep Going",
-            cover: "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
+            cover: SwornCover,
             artist: "Swørn",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
+            credits: "Credits: Swørn - Keep Going",
+            link: "https://chll.to/ba41907d",
+            audio: KeepGoing,
             color: ["#CD607D", "#c94043"],
             id: uuidv4(),
             active: false,
         },
         {
             name: "Wayfare",
-            cover: "https://chillhop.com/wp-content/uploads/2021/06/23b2ff959731b56ea8545828b462311e8b1a2bcc-1024x1024.jpg",
+            cover: WayfareCover,
             artist: "The Kount, Makzo",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=20125",
+            credits: "Credits: The Kount, Makzo - Wayfare",
+            link: "https://chll.to/1f3cc780",
+            audio: Wayfare,
             color: ['#ECC1B3','#B8BD34'],
             id: uuidv4(),
             active: false
         },
         {
-            name: "New Horizons",
-            cover: "https://chillhop.com/wp-content/uploads/2020/09/09fb436604242df99f84b9f359acb046e40d2e9e-1024x1024.jpg",
+            name: "New Horizon",
+            cover: NewHorizonCover,
             artist: "Nymano, Epektase",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=10142",
+            credits: "Credits: Nymano - New Horizons",
+            link: "https://chll.to/33999df0",
+            audio: NewHorizon,
             color: ['#866A8D','#191514'],
             id: uuidv4(),
             active: false
         },
         {
             name: "Today Feels Like Everyday",
-            cover: "https://chillhop.com/wp-content/uploads/2021/01/6b1bb8736ee3e972747bc11f312e31cf7f5823e4-1024x1024.jpg",
+            cover: TodayFeelsLikeEverydayCover,
             artist: "Mama Aiuto",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=12128",
+            credits: "Credits: Mama Aiuto - Today Feels Like Everyday",
+            link: "https://chll.to/6e187463",
+            audio: TodayFeelsLikeEveryday,
             color: ['#203E3F','#3B0C0E'],
             id: uuidv4(),
             active: false
         },
         {
             name: "vhs tapes 1993-1996",
-            cover: "https://chillhop.com/wp-content/uploads/2021/02/08cbb0848f669e1bd8b5a5152c4b7d20edf1b499-1024x1024.jpg",
+            cover: VHSTapesCover,
             artist: "edapollo, Sundreamer",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=12128",
+            credits: "Credits: edapollo, Sundreamer - vhs tapes 1993-1996",
+            link: "https://chll.to/2ac798fd",
+            audio: VHSTapes,
             color: ['#FAB47C','#B85031'],
             id: uuidv4(),
             active: false
         },
         {
             name: "Ocean View",
-            cover: "https://chillhop.com/wp-content/uploads/2020/10/0e5bb63f838ff92eeac142aae944e9f678df13c9-1024x1024.jpg",
+            cover: OceanViewCover,
             artist: "G Mills, Kyle McEvoy, Luke Otwell",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=10320",
+            credits: "Credits: G Mills, Kyle McEvoy, Luke Otwell - Ocean View",
+            link: "https://chll.to/e6017a17",
+            audio: OceanView,
             color: ['#DFC4D3','#123666'],
             id: uuidv4(),
             active: false
         },
         {
             name: "Reflection",
-            cover: "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
+            cover: SwornCover,
             artist: "Swørn",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
+            credits: "Credits: Swørn - Reflection",
+            link: "https://chll.to/38dc7ff2",
+            audio: Reflection,
             color: ["#CD607D", "#c94043"],
             id: uuidv4(),
             active: false,
         },
         {
             name: "Under the City Stars",
-            cover: "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+            cover: UnderTheCityStarsCover,
             artist: "Aso, Middle School, Aviino",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
+            credits: "Credits: Aso, Middle School, Aviino - Under the City Stars",
+            link: "https://chll.to/bf3c2e2e",
+            audio: UnderTheCityStars,
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
             active: false,
         },
         {
             name: "Nightfall",
-            cover: "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+            cover: DaydreamCover,
             artist: "Aiguille",
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
+            credits: "Credits: Aiguille - Nightfall",
+            link: "https://chll.to/cbab4c11",
+            audio: Nightfall,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
+        },
+        {
+            name: "Adventure Is Calling",
+            cover: AdventureIsCallingCover,
+            artist: "Vens Adams",
+            credits: "Credits: Music from Uppbeat (free for Creators!). License code: FFEZZKHNHD1PSTEI",
+            link: "https://uppbeat.io/t/vens-adams/adventure-is-calling",
+            audio: AdventureIsCalling,
+            color: ['#FEF6DF','#9CB4D6'],
+            id: uuidv4(),
+            active: false
         }
     ]
 }
