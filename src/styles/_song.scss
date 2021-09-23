@@ -1,7 +1,7 @@
 @use "./variables" as *;
 
 .song-container {
-    min-height: 60vh;
+    min-height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,13 +9,15 @@
     // animation: rotateCover 10s infinite linear;
     background-color: $color-secondary-dark;
 
-    img {
-        width: 20%;
-        border-radius: 50%;
-    }
+    // img {
+    //     width: 20%;
+    //     border-radius: 50%;
+    //     -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .5));
+    //     filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .5));
+    // }
 
     h2 {
-        padding: 3rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 1rem 1rem;
         color: $color-default-lightgray;
         text-shadow: 0 0 0.5rem black;
     }
@@ -40,59 +42,210 @@
     }
 }
 
-.song-container__animated {
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: rotateCover 10s infinite linear;
-    background-color: $color-secondary-dark;
 
-    img {
-        width: 20%;
-        border-radius: 50%;
-    }
+//body {position:relative;height:600px;background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUI1RkQ3NThCQkE2MTFFMTlDNThDQThGRTg1MEEzODkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUI1RkQ3NTlCQkE2MTFFMTlDNThDQThGRTg1MEEzODkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxQjVGRDc1NkJCQTYxMUUxOUM1OENBOEZFODUwQTM4OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxQjVGRDc1N0JCQTYxMUUxOUM1OENBOEZFODUwQTM4OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pip+YGgAAAW1SURBVHjaXFjbsuQ4CMOO+3+3al/2309iFiTAJKmZrm7HFxBC4DP++fe/vbeIDhljTsVzXZd93vc9xrDvz/OMfGyyfdpbEbHvEw8HBY+/3ftpr2yyvbQV9vk8+7r8lBVTVXwnnModMc5XyiP5fuRb29Rs4r65VHOVH2k/zYDrWma3fVOfI2stG7bdpo1u+4e9bEjxxRbY9znmwKDtwq3pkcMDO4gHv2BEcX6Mc5XtP2GjTwMk9iOwhX2TQzaDr81uO+dxOwbXK/B0Y+dFK+luOuqP0rAEYLsjj9STsDnUgYnZlbiZsWOLbT8yZrUvdgnnDB1DJENgNpk1sSjA35t4PM9tA3ZQ8cBerYqTDW98fojD2Q6JgzjTlGkH0Wj+lPTT8Ehv1WiG6RNn7eKKObnq9/ZY+hrBXjZurO5mDkYaZlb8iBscnYzuAIPVTRsElwsrLpPxYvCAyShgD5XEo3B4C3IWk22qxyWXYLbSRHNJEjyNHMlsBE4wPENb53ESrRlJadXdJxQGTHqzzxB69lORIhVoY3Jt86u9Whpx3QBqFpUmECvu4FMwGk/6rR5CsPn3WwFTZo69UuResMGHLlq2gjVydMcBsczGpqJ0jtaIZnS1TpAgy1EYIIyMBpNlMPNgvX33T/u5gg7MQmgNzEx73UyfpyS26IfzZQQXFmBwL4xzPbhvpgbxt+isijlTGbidKMbWsRyo4qguovHfskLuyAsEnqda6G2VZW2ph4dfEOOwEZEudzvDf7+fTUOpwKlmTUh/KrlhOFWzVPTUgEA22oNMRudVAxga19SuVoF8c8Id49kZ0cPHNlibkN6hUT5hWJ1wVtv/0HEqTi4AFyaxDSrxrbzqFSvmKYjtoR2jcZbawslHuUbyi3Yw2Ez2iiQmW2n79TrYs4u1MjKHPqT2BRJeoU3w58L3q/DePU4pPfwxvUy6sib+O5XZD81V0kPwKdWpd+73KjCD2xb2tcqIXtC8/njGsKh4FhCGT22WE6wXJMDytrrLzFyfwBCo1oR4H0Mqdd1wKqGsMcdmTqhId/zYIVDCPXYIyursPzoOXpFRvmlOmFwmoXRwUY9aIRvLQUllSsq+mDST9N7rSPqNeLKW6fNmH5RT2P2wXB0lAeGjFoFTTGJaVqgQg2WhAlTAbUQ/U7ixTXCztl7epyFPzFF8khOVxMwIa7ZCZUFyPj2aPHy5iKBOlEuWnBXMQ/I5WPuUNRh9a9dO1l1wworDpm4HfuMgkcK5V/TPqDAZyIstZrWxEY4oWRG/3soEhxl7f2W+Khf2+p0lWNnnLo2ypaVtDKWttAR4nigVnk/ei4skO3ZXKES0101P97wkvCsp0km0CrWReYaLJzHCGRa5dDh63pm6Jq0TbV3KPLlAVWBHgZGpQWnXoNOsp3Y6v2hHgKYz+4KijBy096esFZb7BDiQX4DXBZXHjDcm7N/L8JSUpzcb1HYbsJbr95uvqGOrv7+/ysYKRNxkquzzmpWd/aya2PeqTkNDuYjItHL3aReLgIx9jXh1QqZ8i2iawv+jRLvTGLWZ6TT7ScR8ZkPBI6vPrfoWdI1LAzoVYM5YRtqUrx1eXGJ9sc+n8HBf7Lg1brP9HoQ7wyCKS6rCsM5lg01pJO+8NcurYOift0pSkFRt4L2Nd4teOeoOxwJtti6C1K+5b1k4Ej1arTz28epSt8WSBJm9uhftTQuI/DxXFepUO7Wv6YWFntZdqF0kJakbCckNisx+DS5W57KQho/QlBW9p6wbWwc5mqMonSKlIVTpvOwwa+x1NQKCqFy9qf5ESN7PjFshc+ogT7aXwmv+AaPKF8U1MgEt5yxMC8PD5nf5k1IgOSC/71TSA/HygMAUX+ISlfcR6t+ICrOT0vvJW2tWJPRhSeBdkpJ2lx2Rt+mV58ku/06TJv2PSH7ZzdtK3u76nwPkLVjz01n2Px1V+fpfgAEAYfN4sP2JlZ4AAAAASUVORK5CYII=");}
 
-    h2 {
-        padding: 3rem 1rem 1rem 1rem;
-        color: $color-default-lightgray;
-        text-shadow: 0 0 0.5rem black;
-    }
-
-    h3 {
-        color: $color-primary;
-        font-size: 1rem;
-        padding: 0rem 1rem 1rem 1rem;
-    }
-
-    p {
-        padding: 0rem 1rem 0rem 1rem;
-        font-size: 0.6rem;
-        color: lightgray;
-    }
-    a {
-        color: $color-default-darkgray;
-        text-decoration: none;
-        &:hover{
-            color: $color-primary-dark;
-        }
-    }
+.case {
+	position:relative;
+	display:block;
+	width:370px;
+	height:370px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	z-index:2;
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+	margin:0 auto;
+}
+.case:after {
+	position:absolute;
+	display:block;
+	content: "";
+	width:345px;
+	height:10px;
+	left:-40px;
+	bottom:-8px;
+	z-index:1;
+	background: -moz-radial-gradient(center, ellipse farthest-corner,  rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 50%, rgba(225,225,225,0) 51%, rgba(246,246,246,0) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.45)), color-stop(50%,rgba(0,0,0,0)), color-stop(51%,rgba(225,225,225,0)), color-stop(100%,rgba(246,246,246,0)));
+	background: -webkit-radial-gradient(center, ellipse farthest-corner,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%);
+	background: -o-radial-gradient(center, ellipse farthest-corner,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%);
+	background: -ms-radial-gradient(center, ellipse farthest-corner,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%);
+	background: radial-gradient(center, ellipse farthest-corner,  rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%);
+}
+.case .cover{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:2;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.6);
+}
+.case .overlay{
+	position:absolute;
+	display:block;
+	top:0;
+	left:0;
+	z-index:3;
+	width:100%;
+	height:100%;
+	-webkit-box-shadow: inset 1px 1px 4px 0px rgba(255, 255, 255, 0.45),inset 1px 1px 2px 0px rgba(255,255, 255, 0.5),inset -1px -1px 2px 0px rgba(255,255, 255, 0.5);
+	box-shadow: inset 1px 1px 4px 0px rgba(255,255, 255, 0.45),inset 1px 1px 2px 0px rgba(255,255, 255, 0.5),inset -1px -1px 2px 0px rgba(255,255, 255, 0.5);
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid rgba(0, 0, 0, 0.35);
+}
+.case .overlay:before{
+	position:absolute;
+	display:block;
+	content: "";
+	top:0;
+	left:0;
+	z-index:4;
+	width:100%;
+	height:100%;
+	background: -moz-linear-gradient(-55deg,  rgba(255,255,255,0.1) 0%, rgba(244,244,244,0.35) 50%, rgba(225,225,225,0) 51%, rgba(246,246,246,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.1)), color-stop(50%,rgba(244,244,244,0.35)), color-stop(51%,rgba(225,225,225,0)), color-stop(100%,rgba(246,246,246,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,0.1) 0%,rgba(244,244,244,0.35) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(255,255,255,0.1) 0%,rgba(244,244,244,0.35) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(255,255,255,0.1) 0%,rgba(244,244,244,0.35) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%); /* IE10+ */
+	background: linear-gradient(-55deg,  rgba(255,255,255,0.1) 0%,rgba(244,244,244,0.35) 50%,rgba(225,225,225,0) 51%,rgba(246,246,246,0) 100%); /* W3C */
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.vinyl {
+	position:absolute;
+	z-index:1;
+	bottom:4px;
+	left:5px;
+	display:block;
+	width:350px;
+	height:350px;
+	border-radius:200px;
+	background: -moz-linear-gradient(top,  rgba(45,45,45,1) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,45,45,1)), color-stop(100%,rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top,  rgba(45,45,45,1) 0%,rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top,  rgba(45,45,45,1) 0%,rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(45,45,45,1) 0%,rgba(0,0,0,1) 100%);
+	background: linear-gradient(top,  rgba(45,45,45,1) 0%,rgba(0,0,0,1) 100%);
+	-webkit-box-shadow: inset 0px 1px 3px 0px rgba(255, 255, 255, 1);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.35), inset 0px -1px 1px 0px rgba(255, 255, 255, 0.25), 0px 0px 8px 0px rgba(0, 0, 0, 0.4); 
+	border:1px solid #595959;
+	transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+}
+.case:hover .vinyl {
+	animation: spin 600ms ease-in-out;
+	-moz-animation: spin 600ms ease-in-out;
+	-webkit-animation: spin 600ms ease-in-out;
+	left:196px;
+}
+.vinyl:before {
+	position:absolute;
+	display:block;
+	content: "";
+	width:100%;
+	height:100%;
+	border-radius:100%;
+	background: -moz-radial-gradient(center, ellipse farthest-corner,  rgba(38,38,38,0.4) 0%, rgba(89,89,89,0.4) 1%, rgba(35,35,35,0.4) 2%, rgba(86,86,86,0.4) 3%, rgba(35,35,35,0.4) 4%, rgba(86,86,86,0.4) 5%, rgba(35,35,35,0.4) 6%, rgba(86,86,86,0.4) 7%, rgba(35,35,35,0.4) 8%, rgba(86,86,86,0.4) 9%, rgba(35,35,35,0.4) 10%, rgba(86,86,86,0.4) 11%, rgba(35,35,35,0.4) 12%, rgba(86,86,86,0.4) 13%, rgba(35,35,35,0.4) 14%, rgba(86,86,86,0.4) 15%, rgba(35,35,35,0.4) 16%, rgba(86,86,86,0.4) 17%, rgba(35,35,35,0.4) 18%, rgba(86,86,86,0.4) 19%, rgba(35,35,35,0.4) 20%, rgba(86,86,86,0.4) 21%, rgba(35,35,35,0.4) 22%, rgba(86,86,86,0.4) 23%, rgba(35,35,35,0.4) 24%, rgba(86,86,86,0.4) 25%, rgba(35,35,35,0.4) 26%, rgba(86,86,86,0.4) 27%, rgba(35,35,35,0.4) 28%, rgba(86,86,86,0.4) 29%, rgba(35,35,35,0.4) 30%, rgba(86,86,86,0.4) 31%, rgba(35,35,35,0.4) 32%, rgba(86,86,86,0.4) 33%, rgba(35,35,35,0.4) 34%, rgba(86,86,86,0.4) 35%, rgba(35,35,35,0.4) 36%, rgba(86,86,86,0.4) 37%, rgba(35,35,35,0.4) 38%, rgba(86,86,86,0.4) 39%, rgba(35,35,35,0.4) 40%, rgba(86,86,86,0.4) 41%, rgba(35,35,35,0.4) 42%, rgba(86,86,86,0.4) 43%, rgba(35,35,35,0.4) 44%, rgba(86,86,86,0.4) 45%, rgba(35,35,35,0.4) 46%, rgba(86,86,86,0.4) 47%, rgba(35,35,35,0.4) 48%, rgba(86,86,86,0.4) 49%, rgba(35,35,35,0.4) 50%, rgba(86,86,86,0.4) 51%, rgba(35,35,35,0.4) 52%, rgba(86,86,86,0.4) 53%, rgba(35,35,35,0.4) 54%, rgba(86,86,86,0.4) 55%, rgba(35,35,35,0.4) 56%, rgba(86,86,86,0.4) 57%, rgba(35,35,35,0.4) 58%, rgba(86,86,86,0.4) 59%, rgba(35,35,35,0.4) 60%, rgba(86,86,86,0.4) 61%, rgba(35,35,35,0.4) 62%, rgba(86,86,86,0.4) 63%, rgba(35,35,35,0.4) 64%, rgba(86,86,86,0.4) 65%, rgba(35,35,35,0.4) 66%, rgba(86,86,86,0.4) 67%, rgba(35,35,35,0.4) 68%, rgba(86,86,86,0.4) 69%, rgba(35,35,35,0.4) 70%, rgba(86,86,86,0.4) 71%, rgba(35,35,35,0.4) 72%, rgba(86,86,86,0.4) 73%, rgba(35,35,35,0.4) 74%, rgba(86,86,86,0.4) 75%, rgba(35,35,35,0.4) 76%, rgba(86,86,86,0.4) 77%, rgba(35,35,35,0.4) 78%, rgba(86,86,86,0.4) 79%, rgba(35,35,35,0.4) 80%, rgba(86,86,86,0.4) 81%, rgba(35,35,35,0.4) 82%, rgba(86,86,86,0.4) 83%, rgba(35,35,35,0.4) 84%, rgba(86,86,86,0.4) 85%, rgba(35,35,35,0.4) 86%, rgba(86,86,86,0.4) 87%, rgba(35,35,35,0.4) 88%, rgba(86,86,86,0.4) 89%, rgba(35,35,35,0.4) 90%, rgba(86,86,86,0.4) 91%, rgba(35,35,35,0.4) 92%, rgba(86,86,86,0.4) 93%, rgba(35,35,35,0.4) 94%, rgba(86,86,86,0.4) 95%, rgba(35,35,35,0.4) 96%, rgba(86,86,86,0.4) 97%, rgba(86,86,86,0.4) 97%, rgba(35,35,35,0.4) 98%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(38,38,38,0.4)), color-stop(1%,rgba(89,89,89,0.4)), color-stop(2%,rgba(35,35,35,0.4)), color-stop(3%,rgba(86,86,86,0.4)), color-stop(4%,rgba(35,35,35,0.4)), color-stop(5%,rgba(86,86,86,0.4)), color-stop(6%,rgba(35,35,35,0.4)), color-stop(7%,rgba(86,86,86,0.4)), color-stop(8%,rgba(35,35,35,0.4)), color-stop(9%,rgba(86,86,86,0.4)), color-stop(10%,rgba(35,35,35,0.4)), color-stop(11%,rgba(86,86,86,0.4)), color-stop(12%,rgba(35,35,35,0.4)), color-stop(13%,rgba(86,86,86,0.4)), color-stop(14%,rgba(35,35,35,0.4)), color-stop(15%,rgba(86,86,86,0.4)), color-stop(16%,rgba(35,35,35,0.4)), color-stop(17%,rgba(86,86,86,0.4)), color-stop(18%,rgba(35,35,35,0.4)), color-stop(19%,rgba(86,86,86,0.4)), color-stop(20%,rgba(35,35,35,0.4)), color-stop(21%,rgba(86,86,86,0.4)), color-stop(22%,rgba(35,35,35,0.4)), color-stop(23%,rgba(86,86,86,0.4)), color-stop(24%,rgba(35,35,35,0.4)), color-stop(25%,rgba(86,86,86,0.4)), color-stop(26%,rgba(35,35,35,0.4)), color-stop(27%,rgba(86,86,86,0.4)), color-stop(28%,rgba(35,35,35,0.4)), color-stop(29%,rgba(86,86,86,0.4)), color-stop(30%,rgba(35,35,35,0.4)), color-stop(31%,rgba(86,86,86,0.4)), color-stop(32%,rgba(35,35,35,0.4)), color-stop(33%,rgba(86,86,86,0.4)), color-stop(34%,rgba(35,35,35,0.4)), color-stop(35%,rgba(86,86,86,0.4)), color-stop(36%,rgba(35,35,35,0.4)), color-stop(37%,rgba(86,86,86,0.4)), color-stop(38%,rgba(35,35,35,0.4)), color-stop(39%,rgba(86,86,86,0.4)), color-stop(40%,rgba(35,35,35,0.4)), color-stop(41%,rgba(86,86,86,0.4)), color-stop(42%,rgba(35,35,35,0.4)), color-stop(43%,rgba(86,86,86,0.4)), color-stop(44%,rgba(35,35,35,0.4)), color-stop(45%,rgba(86,86,86,0.4)), color-stop(46%,rgba(35,35,35,0.4)), color-stop(47%,rgba(86,86,86,0.4)), color-stop(48%,rgba(35,35,35,0.4)), color-stop(49%,rgba(86,86,86,0.4)), color-stop(50%,rgba(35,35,35,0.4)), color-stop(51%,rgba(86,86,86,0.4)), color-stop(52%,rgba(35,35,35,0.4)), color-stop(53%,rgba(86,86,86,0.4)), color-stop(54%,rgba(35,35,35,0.4)), color-stop(55%,rgba(86,86,86,0.4)), color-stop(56%,rgba(35,35,35,0.4)), color-stop(57%,rgba(86,86,86,0.4)), color-stop(58%,rgba(35,35,35,0.4)), color-stop(59%,rgba(86,86,86,0.4)), color-stop(60%,rgba(35,35,35,0.4)), color-stop(61%,rgba(86,86,86,0.4)), color-stop(62%,rgba(35,35,35,0.4)), color-stop(63%,rgba(86,86,86,0.4)), color-stop(64%,rgba(35,35,35,0.4)), color-stop(65%,rgba(86,86,86,0.4)), color-stop(66%,rgba(35,35,35,0.4)), color-stop(67%,rgba(86,86,86,0.4)), color-stop(68%,rgba(35,35,35,0.4)), color-stop(69%,rgba(86,86,86,0.4)), color-stop(70%,rgba(35,35,35,0.4)), color-stop(71%,rgba(86,86,86,0.4)), color-stop(72%,rgba(35,35,35,0.4)), color-stop(73%,rgba(86,86,86,0.4)), color-stop(74%,rgba(35,35,35,0.4)), color-stop(75%,rgba(86,86,86,0.4)), color-stop(76%,rgba(35,35,35,0.4)), color-stop(77%,rgba(86,86,86,0.4)), color-stop(78%,rgba(35,35,35,0.4)), color-stop(79%,rgba(86,86,86,0.4)), color-stop(80%,rgba(35,35,35,0.4)), color-stop(81%,rgba(86,86,86,0.4)), color-stop(82%,rgba(35,35,35,0.4)), color-stop(83%,rgba(86,86,86,0.4)), color-stop(84%,rgba(35,35,35,0.4)), color-stop(85%,rgba(86,86,86,0.4)), color-stop(86%,rgba(35,35,35,0.4)), color-stop(87%,rgba(86,86,86,0.4)), color-stop(88%,rgba(35,35,35,0.4)), color-stop(89%,rgba(86,86,86,0.4)), color-stop(90%,rgba(35,35,35,0.4)), color-stop(91%,rgba(86,86,86,0.4)), color-stop(92%,rgba(35,35,35,0.4)), color-stop(93%,rgba(86,86,86,0.4)), color-stop(94%,rgba(35,35,35,0.4)), color-stop(95%,rgba(86,86,86,0.4)), color-stop(96%,rgba(35,35,35,0.4)), color-stop(97%,rgba(86,86,86,0.4)), color-stop(97%,rgba(86,86,86,0.4)), color-stop(98%,rgba(35,35,35,0.4)));
+	background: -webkit-radial-gradient(center, ellipse farthest-corner,  rgba(38,38,38,0.4) 0%,rgba(89,89,89,0.4) 1%,rgba(35,35,35,0.4) 2%,rgba(86,86,86,0.4) 3%,rgba(35,35,35,0.4) 4%,rgba(86,86,86,0.4) 5%,rgba(35,35,35,0.4) 6%,rgba(86,86,86,0.4) 7%,rgba(35,35,35,0.4) 8%,rgba(86,86,86,0.4) 9%,rgba(35,35,35,0.4) 10%,rgba(86,86,86,0.4) 11%,rgba(35,35,35,0.4) 12%,rgba(86,86,86,0.4) 13%,rgba(35,35,35,0.4) 14%,rgba(86,86,86,0.4) 15%,rgba(35,35,35,0.4) 16%,rgba(86,86,86,0.4) 17%,rgba(35,35,35,0.4) 18%,rgba(86,86,86,0.4) 19%,rgba(35,35,35,0.4) 20%,rgba(86,86,86,0.4) 21%,rgba(35,35,35,0.4) 22%,rgba(86,86,86,0.4) 23%,rgba(35,35,35,0.4) 24%,rgba(86,86,86,0.4) 25%,rgba(35,35,35,0.4) 26%,rgba(86,86,86,0.4) 27%,rgba(35,35,35,0.4) 28%,rgba(86,86,86,0.4) 29%,rgba(35,35,35,0.4) 30%,rgba(86,86,86,0.4) 31%,rgba(35,35,35,0.4) 32%,rgba(86,86,86,0.4) 33%,rgba(35,35,35,0.4) 34%,rgba(86,86,86,0.4) 35%,rgba(35,35,35,0.4) 36%,rgba(86,86,86,0.4) 37%,rgba(35,35,35,0.4) 38%,rgba(86,86,86,0.4) 39%,rgba(35,35,35,0.4) 40%,rgba(86,86,86,0.4) 41%,rgba(35,35,35,0.4) 42%,rgba(86,86,86,0.4) 43%,rgba(35,35,35,0.4) 44%,rgba(86,86,86,0.4) 45%,rgba(35,35,35,0.4) 46%,rgba(86,86,86,0.4) 47%,rgba(35,35,35,0.4) 48%,rgba(86,86,86,0.4) 49%,rgba(35,35,35,0.4) 50%,rgba(86,86,86,0.4) 51%,rgba(35,35,35,0.4) 52%,rgba(86,86,86,0.4) 53%,rgba(35,35,35,0.4) 54%,rgba(86,86,86,0.4) 55%,rgba(35,35,35,0.4) 56%,rgba(86,86,86,0.4) 57%,rgba(35,35,35,0.4) 58%,rgba(86,86,86,0.4) 59%,rgba(35,35,35,0.4) 60%,rgba(86,86,86,0.4) 61%,rgba(35,35,35,0.4) 62%,rgba(86,86,86,0.4) 63%,rgba(35,35,35,0.4) 64%,rgba(86,86,86,0.4) 65%,rgba(35,35,35,0.4) 66%,rgba(86,86,86,0.4) 67%,rgba(35,35,35,0.4) 68%,rgba(86,86,86,0.4) 69%,rgba(35,35,35,0.4) 70%,rgba(86,86,86,0.4) 71%,rgba(35,35,35,0.4) 72%,rgba(86,86,86,0.4) 73%,rgba(35,35,35,0.4) 74%,rgba(86,86,86,0.4) 75%,rgba(35,35,35,0.4) 76%,rgba(86,86,86,0.4) 77%,rgba(35,35,35,0.4) 78%,rgba(86,86,86,0.4) 79%,rgba(35,35,35,0.4) 80%,rgba(86,86,86,0.4) 81%,rgba(35,35,35,0.4) 82%,rgba(86,86,86,0.4) 83%,rgba(35,35,35,0.4) 84%,rgba(86,86,86,0.4) 85%,rgba(35,35,35,0.4) 86%,rgba(86,86,86,0.4) 87%,rgba(35,35,35,0.4) 88%,rgba(86,86,86,0.4) 89%,rgba(35,35,35,0.4) 90%,rgba(86,86,86,0.4) 91%,rgba(35,35,35,0.4) 92%,rgba(86,86,86,0.4) 93%,rgba(35,35,35,0.4) 94%,rgba(86,86,86,0.4) 95%,rgba(35,35,35,0.4) 96%,rgba(86,86,86,0.4) 97%,rgba(86,86,86,0.4) 97%,rgba(35,35,35,0.4) 98%);
+	background: -o-radial-gradient(center, ellipse farthest-corner,  rgba(38,38,38,0.4) 0%,rgba(89,89,89,0.4) 1%,rgba(35,35,35,0.4) 2%,rgba(86,86,86,0.4) 3%,rgba(35,35,35,0.4) 4%,rgba(86,86,86,0.4) 5%,rgba(35,35,35,0.4) 6%,rgba(86,86,86,0.4) 7%,rgba(35,35,35,0.4) 8%,rgba(86,86,86,0.4) 9%,rgba(35,35,35,0.4) 10%,rgba(86,86,86,0.4) 11%,rgba(35,35,35,0.4) 12%,rgba(86,86,86,0.4) 13%,rgba(35,35,35,0.4) 14%,rgba(86,86,86,0.4) 15%,rgba(35,35,35,0.4) 16%,rgba(86,86,86,0.4) 17%,rgba(35,35,35,0.4) 18%,rgba(86,86,86,0.4) 19%,rgba(35,35,35,0.4) 20%,rgba(86,86,86,0.4) 21%,rgba(35,35,35,0.4) 22%,rgba(86,86,86,0.4) 23%,rgba(35,35,35,0.4) 24%,rgba(86,86,86,0.4) 25%,rgba(35,35,35,0.4) 26%,rgba(86,86,86,0.4) 27%,rgba(35,35,35,0.4) 28%,rgba(86,86,86,0.4) 29%,rgba(35,35,35,0.4) 30%,rgba(86,86,86,0.4) 31%,rgba(35,35,35,0.4) 32%,rgba(86,86,86,0.4) 33%,rgba(35,35,35,0.4) 34%,rgba(86,86,86,0.4) 35%,rgba(35,35,35,0.4) 36%,rgba(86,86,86,0.4) 37%,rgba(35,35,35,0.4) 38%,rgba(86,86,86,0.4) 39%,rgba(35,35,35,0.4) 40%,rgba(86,86,86,0.4) 41%,rgba(35,35,35,0.4) 42%,rgba(86,86,86,0.4) 43%,rgba(35,35,35,0.4) 44%,rgba(86,86,86,0.4) 45%,rgba(35,35,35,0.4) 46%,rgba(86,86,86,0.4) 47%,rgba(35,35,35,0.4) 48%,rgba(86,86,86,0.4) 49%,rgba(35,35,35,0.4) 50%,rgba(86,86,86,0.4) 51%,rgba(35,35,35,0.4) 52%,rgba(86,86,86,0.4) 53%,rgba(35,35,35,0.4) 54%,rgba(86,86,86,0.4) 55%,rgba(35,35,35,0.4) 56%,rgba(86,86,86,0.4) 57%,rgba(35,35,35,0.4) 58%,rgba(86,86,86,0.4) 59%,rgba(35,35,35,0.4) 60%,rgba(86,86,86,0.4) 61%,rgba(35,35,35,0.4) 62%,rgba(86,86,86,0.4) 63%,rgba(35,35,35,0.4) 64%,rgba(86,86,86,0.4) 65%,rgba(35,35,35,0.4) 66%,rgba(86,86,86,0.4) 67%,rgba(35,35,35,0.4) 68%,rgba(86,86,86,0.4) 69%,rgba(35,35,35,0.4) 70%,rgba(86,86,86,0.4) 71%,rgba(35,35,35,0.4) 72%,rgba(86,86,86,0.4) 73%,rgba(35,35,35,0.4) 74%,rgba(86,86,86,0.4) 75%,rgba(35,35,35,0.4) 76%,rgba(86,86,86,0.4) 77%,rgba(35,35,35,0.4) 78%,rgba(86,86,86,0.4) 79%,rgba(35,35,35,0.4) 80%,rgba(86,86,86,0.4) 81%,rgba(35,35,35,0.4) 82%,rgba(86,86,86,0.4) 83%,rgba(35,35,35,0.4) 84%,rgba(86,86,86,0.4) 85%,rgba(35,35,35,0.4) 86%,rgba(86,86,86,0.4) 87%,rgba(35,35,35,0.4) 88%,rgba(86,86,86,0.4) 89%,rgba(35,35,35,0.4) 90%,rgba(86,86,86,0.4) 91%,rgba(35,35,35,0.4) 92%,rgba(86,86,86,0.4) 93%,rgba(35,35,35,0.4) 94%,rgba(86,86,86,0.4) 95%,rgba(35,35,35,0.4) 96%,rgba(86,86,86,0.4) 97%,rgba(86,86,86,0.4) 97%,rgba(35,35,35,0.4) 98%);
+	background: -ms-radial-gradient(center, ellipse farthest-corner,  rgba(38,38,38,0.4) 0%,rgba(89,89,89,0.4) 1%,rgba(35,35,35,0.4) 2%,rgba(86,86,86,0.4) 3%,rgba(35,35,35,0.4) 4%,rgba(86,86,86,0.4) 5%,rgba(35,35,35,0.4) 6%,rgba(86,86,86,0.4) 7%,rgba(35,35,35,0.4) 8%,rgba(86,86,86,0.4) 9%,rgba(35,35,35,0.4) 10%,rgba(86,86,86,0.4) 11%,rgba(35,35,35,0.4) 12%,rgba(86,86,86,0.4) 13%,rgba(35,35,35,0.4) 14%,rgba(86,86,86,0.4) 15%,rgba(35,35,35,0.4) 16%,rgba(86,86,86,0.4) 17%,rgba(35,35,35,0.4) 18%,rgba(86,86,86,0.4) 19%,rgba(35,35,35,0.4) 20%,rgba(86,86,86,0.4) 21%,rgba(35,35,35,0.4) 22%,rgba(86,86,86,0.4) 23%,rgba(35,35,35,0.4) 24%,rgba(86,86,86,0.4) 25%,rgba(35,35,35,0.4) 26%,rgba(86,86,86,0.4) 27%,rgba(35,35,35,0.4) 28%,rgba(86,86,86,0.4) 29%,rgba(35,35,35,0.4) 30%,rgba(86,86,86,0.4) 31%,rgba(35,35,35,0.4) 32%,rgba(86,86,86,0.4) 33%,rgba(35,35,35,0.4) 34%,rgba(86,86,86,0.4) 35%,rgba(35,35,35,0.4) 36%,rgba(86,86,86,0.4) 37%,rgba(35,35,35,0.4) 38%,rgba(86,86,86,0.4) 39%,rgba(35,35,35,0.4) 40%,rgba(86,86,86,0.4) 41%,rgba(35,35,35,0.4) 42%,rgba(86,86,86,0.4) 43%,rgba(35,35,35,0.4) 44%,rgba(86,86,86,0.4) 45%,rgba(35,35,35,0.4) 46%,rgba(86,86,86,0.4) 47%,rgba(35,35,35,0.4) 48%,rgba(86,86,86,0.4) 49%,rgba(35,35,35,0.4) 50%,rgba(86,86,86,0.4) 51%,rgba(35,35,35,0.4) 52%,rgba(86,86,86,0.4) 53%,rgba(35,35,35,0.4) 54%,rgba(86,86,86,0.4) 55%,rgba(35,35,35,0.4) 56%,rgba(86,86,86,0.4) 57%,rgba(35,35,35,0.4) 58%,rgba(86,86,86,0.4) 59%,rgba(35,35,35,0.4) 60%,rgba(86,86,86,0.4) 61%,rgba(35,35,35,0.4) 62%,rgba(86,86,86,0.4) 63%,rgba(35,35,35,0.4) 64%,rgba(86,86,86,0.4) 65%,rgba(35,35,35,0.4) 66%,rgba(86,86,86,0.4) 67%,rgba(35,35,35,0.4) 68%,rgba(86,86,86,0.4) 69%,rgba(35,35,35,0.4) 70%,rgba(86,86,86,0.4) 71%,rgba(35,35,35,0.4) 72%,rgba(86,86,86,0.4) 73%,rgba(35,35,35,0.4) 74%,rgba(86,86,86,0.4) 75%,rgba(35,35,35,0.4) 76%,rgba(86,86,86,0.4) 77%,rgba(35,35,35,0.4) 78%,rgba(86,86,86,0.4) 79%,rgba(35,35,35,0.4) 80%,rgba(86,86,86,0.4) 81%,rgba(35,35,35,0.4) 82%,rgba(86,86,86,0.4) 83%,rgba(35,35,35,0.4) 84%,rgba(86,86,86,0.4) 85%,rgba(35,35,35,0.4) 86%,rgba(86,86,86,0.4) 87%,rgba(35,35,35,0.4) 88%,rgba(86,86,86,0.4) 89%,rgba(35,35,35,0.4) 90%,rgba(86,86,86,0.4) 91%,rgba(35,35,35,0.4) 92%,rgba(86,86,86,0.4) 93%,rgba(35,35,35,0.4) 94%,rgba(86,86,86,0.4) 95%,rgba(35,35,35,0.4) 96%,rgba(86,86,86,0.4) 97%,rgba(86,86,86,0.4) 97%,rgba(35,35,35,0.4) 98%);
+	background: radial-gradient(center, ellipse farthest-corner,  rgba(38,38,38,0.4) 0%,rgba(89,89,89,0.4) 1%,rgba(35,35,35,0.4) 2%,rgba(86,86,86,0.4) 3%,rgba(35,35,35,0.4) 4%,rgba(86,86,86,0.4) 5%,rgba(35,35,35,0.4) 6%,rgba(86,86,86,0.4) 7%,rgba(35,35,35,0.4) 8%,rgba(86,86,86,0.4) 9%,rgba(35,35,35,0.4) 10%,rgba(86,86,86,0.4) 11%,rgba(35,35,35,0.4) 12%,rgba(86,86,86,0.4) 13%,rgba(35,35,35,0.4) 14%,rgba(86,86,86,0.4) 15%,rgba(35,35,35,0.4) 16%,rgba(86,86,86,0.4) 17%,rgba(35,35,35,0.4) 18%,rgba(86,86,86,0.4) 19%,rgba(35,35,35,0.4) 20%,rgba(86,86,86,0.4) 21%,rgba(35,35,35,0.4) 22%,rgba(86,86,86,0.4) 23%,rgba(35,35,35,0.4) 24%,rgba(86,86,86,0.4) 25%,rgba(35,35,35,0.4) 26%,rgba(86,86,86,0.4) 27%,rgba(35,35,35,0.4) 28%,rgba(86,86,86,0.4) 29%,rgba(35,35,35,0.4) 30%,rgba(86,86,86,0.4) 31%,rgba(35,35,35,0.4) 32%,rgba(86,86,86,0.4) 33%,rgba(35,35,35,0.4) 34%,rgba(86,86,86,0.4) 35%,rgba(35,35,35,0.4) 36%,rgba(86,86,86,0.4) 37%,rgba(35,35,35,0.4) 38%,rgba(86,86,86,0.4) 39%,rgba(35,35,35,0.4) 40%,rgba(86,86,86,0.4) 41%,rgba(35,35,35,0.4) 42%,rgba(86,86,86,0.4) 43%,rgba(35,35,35,0.4) 44%,rgba(86,86,86,0.4) 45%,rgba(35,35,35,0.4) 46%,rgba(86,86,86,0.4) 47%,rgba(35,35,35,0.4) 48%,rgba(86,86,86,0.4) 49%,rgba(35,35,35,0.4) 50%,rgba(86,86,86,0.4) 51%,rgba(35,35,35,0.4) 52%,rgba(86,86,86,0.4) 53%,rgba(35,35,35,0.4) 54%,rgba(86,86,86,0.4) 55%,rgba(35,35,35,0.4) 56%,rgba(86,86,86,0.4) 57%,rgba(35,35,35,0.4) 58%,rgba(86,86,86,0.4) 59%,rgba(35,35,35,0.4) 60%,rgba(86,86,86,0.4) 61%,rgba(35,35,35,0.4) 62%,rgba(86,86,86,0.4) 63%,rgba(35,35,35,0.4) 64%,rgba(86,86,86,0.4) 65%,rgba(35,35,35,0.4) 66%,rgba(86,86,86,0.4) 67%,rgba(35,35,35,0.4) 68%,rgba(86,86,86,0.4) 69%,rgba(35,35,35,0.4) 70%,rgba(86,86,86,0.4) 71%,rgba(35,35,35,0.4) 72%,rgba(86,86,86,0.4) 73%,rgba(35,35,35,0.4) 74%,rgba(86,86,86,0.4) 75%,rgba(35,35,35,0.4) 76%,rgba(86,86,86,0.4) 77%,rgba(35,35,35,0.4) 78%,rgba(86,86,86,0.4) 79%,rgba(35,35,35,0.4) 80%,rgba(86,86,86,0.4) 81%,rgba(35,35,35,0.4) 82%,rgba(86,86,86,0.4) 83%,rgba(35,35,35,0.4) 84%,rgba(86,86,86,0.4) 85%,rgba(35,35,35,0.4) 86%,rgba(86,86,86,0.4) 87%,rgba(35,35,35,0.4) 88%,rgba(86,86,86,0.4) 89%,rgba(35,35,35,0.4) 90%,rgba(86,86,86,0.4) 91%,rgba(35,35,35,0.4) 92%,rgba(86,86,86,0.4) 93%,rgba(35,35,35,0.4) 94%,rgba(86,86,86,0.4) 95%,rgba(35,35,35,0.4) 96%,rgba(86,86,86,0.4) 97%,rgba(86,86,86,0.4) 97%,rgba(35,35,35,0.4) 98%);
+	top:0;
+	left:0;
+}
+.vinyl:after {
+	position:absolute;
+	display:block;
+	content: "\002022";
+	width:68px;
+	height:106px;
+	line-height:106px;
+	border-radius:106px;
+	top:120px;
+	left:120px;
+	padding-left:38px;
+	color:#000;
+	background: -moz-linear-gradient(-45deg,  rgba(252,252,252,1) 0%, rgba(239,239,239,1) 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(239,239,239,1)));
+	background: -webkit-linear-gradient(-45deg,  rgba(252,252,252,1) 0%,rgba(239,239,239,1) 100%);
+	background: -o-linear-gradient(-45deg,  rgba(252,252,252,1) 0%,rgba(239,239,239,1) 100%);
+	background: -ms-linear-gradient(-45deg,  rgba(252,252,252,1) 0%,rgba(239,239,239,1) 100%);
+	background: linear-gradient(-45deg,  rgba(252,252,252,1) 0%,rgba(239,239,239,1) 100%);
+	border:1px solid #000;
+	font-size:40px;
+	text-shadow: 0px 0px 3px rgba(0,0,0, 0.8);
+}
+.slotwrapper {
+	position:absolute;
+	display:block;
+	top:0px;
+	right:-20px;
+	height:100%;
+	width:20px;
+	overflow:hidden;
+}
+.slot{
+	position:absolute;
+	display:block;
+    top:-320px;
+	left:-134px;
+	height:1010px;
+	width:170px;
+	background: -moz-radial-gradient(center, ellipse farthest-corner,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(76,76,76,1) 51%, rgba(76,76,76,0) 52%, rgba(0,0,0,0.1) 53%, rgba(0,0,0,0) 58%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,1)), color-stop(51%,rgba(76,76,76,1)), color-stop(52%,rgba(76,76,76,0)), color-stop(53%,rgba(0,0,0,0.1)), color-stop(58%,rgba(0,0,0,0)));
+	background: -webkit-radial-gradient(center, ellipse farthest-corner,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(76,76,76,1) 51%,rgba(76,76,76,0) 52%,rgba(0,0,0,0.1) 53%,rgba(0,0,0,0) 58%);
+	background: -o-radial-gradient(center, ellipse farthest-corner,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(76,76,76,1) 51%,rgba(76,76,76,0) 52%,rgba(0,0,0,0.1) 53%,rgba(0,0,0,0) 58%);
+	background: -ms-radial-gradient(center, ellipse farthest-corner,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(76,76,76,1) 51%,rgba(76,76,76,0) 52%,rgba(0,0,0,0.1) 53%,rgba(0,0,0,0) 58%);
+	background: radial-gradient(center, ellipse farthest-corner,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(76,76,76,1) 51%,rgba(76,76,76,0) 52%,rgba(0,0,0,0.1) 53%,rgba(0,0,0,0) 58%);
 }
 
-@media screen and (max-width: 768px) {
-    .song-container{
-        img {
-            width: 60%;
-        }
-    }
+@keyframes spin
+{
+from {
+	-moz-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-o-transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	transform:rotate(0deg);
+}
+to {
+	-moz-transform:rotate(360deg);
+	-webkit-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
 }
 
-@keyframes rotateCover {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+@-moz-keyframes spin
+{
+from {
+	-moz-transform:rotate(0deg);
+	transform:rotate(0deg);
+}
+to {
+	-moz-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+}
+
+@-webkit-keyframes spin
+{
+from {
+	-webkit-transform:rotate(0deg);
+	transform:rotate(0deg);
+}
+to {
+	-webkit-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+} 

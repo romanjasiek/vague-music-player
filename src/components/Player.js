@@ -84,7 +84,7 @@ const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, s
                 </div>
                 <p>{songInfo.duration ? getTime(songInfo.duration) : '0:00'}</p>
             </div>
-            <div className="play-control">
+            <div className="play-control play-control__shadow">
                 {/* The arrow function prevents the function from being executed instantly */}
                 <FontAwesomeIcon 
                     onClick={() => {skipTrackHandler('skip-back')}}

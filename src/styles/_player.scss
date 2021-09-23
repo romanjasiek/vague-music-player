@@ -33,11 +33,17 @@
     justify-content: space-between;
     padding: 1rem;
     color: $color-primary;
-    text-shadow: 0 0 0.5rem black;
     svg {
         cursor: pointer;
+        
     }
 }
+
+.play-control__shadow {
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .5));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .5));
+}
+
 
 .track {
     width: 100%;
@@ -47,7 +53,7 @@
     border-radius: 1rem;
   }
   .animate-track {
-    background: rgb(204, 204, 204);
+    background: $color-secondary;
     width: 100%;
     height: 100%;
     position: absolute;
