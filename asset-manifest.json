@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/vague-music-player/static/css/main.3cc9bcca.chunk.css",
-    "main.js": "/vague-music-player/static/js/main.5757b87c.chunk.js",
-    "main.js.map": "/vague-music-player/static/js/main.5757b87c.chunk.js.map",
+    "main.css": "/vague-music-player/static/css/main.5f37d7e0.chunk.css",
+    "main.js": "/vague-music-player/static/js/main.2d86d4c4.chunk.js",
+    "main.js.map": "/vague-music-player/static/js/main.2d86d4c4.chunk.js.map",
     "runtime-main.js": "/vague-music-player/static/js/runtime-main.fab98ead.js",
     "runtime-main.js.map": "/vague-music-player/static/js/runtime-main.fab98ead.js.map",
     "static/js/2.d4d3132c.chunk.js": "/vague-music-player/static/js/2.d4d3132c.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.c1a28f42.chunk.js": "/vague-music-player/static/js/3.c1a28f42.chunk.js",
     "static/js/3.c1a28f42.chunk.js.map": "/vague-music-player/static/js/3.c1a28f42.chunk.js.map",
     "index.html": "/vague-music-player/index.html",
-    "static/css/main.3cc9bcca.chunk.css.map": "/vague-music-player/static/css/main.3cc9bcca.chunk.css.map",
+    "static/css/main.5f37d7e0.chunk.css.map": "/vague-music-player/static/css/main.5f37d7e0.chunk.css.map",
     "static/js/2.d4d3132c.chunk.js.LICENSE.txt": "/vague-music-player/static/js/2.d4d3132c.chunk.js.LICENSE.txt",
     "static/media/AK_Avatar_3032648670472391.5f34d6dd.jpg": "/vague-music-player/static/media/AK_Avatar_3032648670472391.5f34d6dd.jpg",
     "static/media/Hartzmann_Avatar_6691536139022807.7da0d736.jpg": "/vague-music-player/static/media/Hartzmann_Avatar_6691536139022807.7da0d736.jpg",
@@ -49,7 +49,7 @@
   "entrypoints": [
     "static/js/runtime-main.fab98ead.js",
     "static/js/2.d4d3132c.chunk.js",
-    "static/css/main.3cc9bcca.chunk.css",
-    "static/js/main.5757b87c.chunk.js"
+    "static/css/main.5f37d7e0.chunk.css",
+    "static/js/main.2d86d4c4.chunk.js"
   ]
 }
