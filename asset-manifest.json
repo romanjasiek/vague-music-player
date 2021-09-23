@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/vague-music-player/static/css/main.5f37d7e0.chunk.css",
-    "main.js": "/vague-music-player/static/js/main.2d86d4c4.chunk.js",
-    "main.js.map": "/vague-music-player/static/js/main.2d86d4c4.chunk.js.map",
+    "main.css": "/vague-music-player/static/css/main.8a5ac99a.chunk.css",
+    "main.js": "/vague-music-player/static/js/main.33bb0e0d.chunk.js",
+    "main.js.map": "/vague-music-player/static/js/main.33bb0e0d.chunk.js.map",
     "runtime-main.js": "/vague-music-player/static/js/runtime-main.fab98ead.js",
     "runtime-main.js.map": "/vague-music-player/static/js/runtime-main.fab98ead.js.map",
-    "static/js/2.d4d3132c.chunk.js": "/vague-music-player/static/js/2.d4d3132c.chunk.js",
-    "static/js/2.d4d3132c.chunk.js.map": "/vague-music-player/static/js/2.d4d3132c.chunk.js.map",
+    "static/js/2.61b05611.chunk.js": "/vague-music-player/static/js/2.61b05611.chunk.js",
+    "static/js/2.61b05611.chunk.js.map": "/vague-music-player/static/js/2.61b05611.chunk.js.map",
     "static/js/3.c1a28f42.chunk.js": "/vague-music-player/static/js/3.c1a28f42.chunk.js",
     "static/js/3.c1a28f42.chunk.js.map": "/vague-music-player/static/js/3.c1a28f42.chunk.js.map",
     "index.html": "/vague-music-player/index.html",
-    "static/css/main.5f37d7e0.chunk.css.map": "/vague-music-player/static/css/main.5f37d7e0.chunk.css.map",
-    "static/js/2.d4d3132c.chunk.js.LICENSE.txt": "/vague-music-player/static/js/2.d4d3132c.chunk.js.LICENSE.txt",
+    "static/css/main.8a5ac99a.chunk.css.map": "/vague-music-player/static/css/main.8a5ac99a.chunk.css.map",
+    "static/js/2.61b05611.chunk.js.LICENSE.txt": "/vague-music-player/static/js/2.61b05611.chunk.js.LICENSE.txt",
     "static/media/AK_Avatar_3032648670472391.5f34d6dd.jpg": "/vague-music-player/static/media/AK_Avatar_3032648670472391.5f34d6dd.jpg",
     "static/media/Hartzmann_Avatar_6691536139022807.7da0d736.jpg": "/vague-music-player/static/media/Hartzmann_Avatar_6691536139022807.7da0d736.jpg",
     "static/media/app.scss": "/vague-music-player/static/media/Jost-VariableFont_wght.3410386a.ttf",
@@ -48,8 +48,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.fab98ead.js",
-    "static/js/2.d4d3132c.chunk.js",
-    "static/css/main.5f37d7e0.chunk.css",
-    "static/js/main.2d86d4c4.chunk.js"
+    "static/js/2.61b05611.chunk.js",
+    "static/css/main.8a5ac99a.chunk.css",
+    "static/js/main.33bb0e0d.chunk.js"
   ]
 }
