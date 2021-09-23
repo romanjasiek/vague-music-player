@@ -6,6 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // animation: rotation 10s infinite linear;
+    background-color: $color-secondary-dark;
 
     img {
         width: 20%;
@@ -14,6 +16,8 @@
 
     h2 {
         padding: 3rem 1rem 1rem 1rem;
+        color: $color-default-lightgray;
+        text-shadow: 0 0 0.5rem black;
     }
 
     h3 {
@@ -27,6 +31,13 @@
         font-size: 0.6rem;
         color: lightgray;
     }
+    a {
+        color: $color-default-darkgray;
+        text-decoration: none;
+        &:hover{
+            color: $color-primary-dark;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -36,3 +47,4 @@
         }
     }
 }
+

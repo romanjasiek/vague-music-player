@@ -6,13 +6,27 @@
     left: 0;
     width: 20rem;
     height: 100%;
-    box-shadow: 2px 2px 50px #cfcfcf;
+    box-shadow: 2px 2px 50px black;
+    background-color: $color-secondary;
+    color: $color-default-lightgray;
     overflow: scroll;
     transform: translateX(-100%);
     transition: all 0.5s ease;
     opacity: 0;
     h2 {
+        color: $color-default-lightgray;
+        text-shadow: 0 0 0.5rem black;
         padding: 2rem;
+    }
+    h3{
+        color: $color-default-lightgray;
+    }
+    h4{
+        color: $color-primary;
+    }
+    img {
+        -webkit-box-shadow: 7px 3px 5px 1px rgba(0,0,0,0.5); 
+        box-shadow: 7px 3px 5px 1px rgba(0,0,0,0.5);
     }
 }
 
@@ -28,6 +42,7 @@
     &:hover {
         background-color: $color-primary;
         color: $color-default-lightgray;
+        text-shadow: 0 0 0.5rem black;
         h4 {
             color: $color-default-lightgray;
         }

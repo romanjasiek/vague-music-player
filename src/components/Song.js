@@ -7,7 +7,7 @@ const Song = ({currentSong}) => {
             <h2>{currentSong.name}</h2>
             <h3>{currentSong.artist}</h3>
             <p>{currentSong.credits}</p>
-            <p>{currentSong.link}</p>
+            <p><a href={currentSong.link} target="_blank">{currentSong.link}</a></p>
         </div>
     )
 }

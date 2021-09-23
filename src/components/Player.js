@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Animated } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faAngleLeft, faAngleRight,faPause } from '@fortawesome/free-solid-svg-icons';
 
@@ -90,8 +90,10 @@ const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, s
                     onClick={() => {skipTrackHandler('skip-back')}}
                     className="skip-back" size="2x" icon={faAngleLeft} />
                 <FontAwesomeIcon 
-                    onClick={playSongHandler} 
-                    className="play" size="2x" icon={isPlaying ? faPause : faPlay} />
+                    onClick={playSongHandler}
+                    className="play" size="2x"
+                    icon={isPlaying ? faPause : faPlay}
+                    />
                 <FontAwesomeIcon 
                     onClick={() => {skipTrackHandler('skip-forward')}} 
                     className="skip-forward" size="2x" icon={faAngleRight} />

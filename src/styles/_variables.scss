@@ -4,4 +4,6 @@
 $color-primary: rgb(233, 196, 106)!default;
 $color-primary-dark: color.scale($color-primary, $lightness: -20%)!default;
 $color-secondary: #555555!default;
+$color-secondary-dark: color.scale($color-secondary, $lightness: -30%)!default;
 $color-default-lightgray: #fefefe!default;
+$color-default-darkgray: color.scale($color-default-lightgray, $lightness: -30%)!default;

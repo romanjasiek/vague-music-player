@@ -5,9 +5,11 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: $color-secondary-dark;
     button {
         background: transparent;
         border: 1px solid rgb(65,65,65);
+        color: $color-primary;
         cursor: pointer;
         padding: 0.5rem;
         transition: all 0.3s ease;
@@ -17,7 +19,9 @@ nav {
         }
     }
     h1 {
-        padding-left: 5rem;
+        color: $color-primary;
+        text-shadow: 0 0 0.5rem black;
+        // padding-left: 5rem;
     }
 }
 
