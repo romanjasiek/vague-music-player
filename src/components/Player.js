@@ -1,4 +1,4 @@
-import React, { Animated } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faAngleLeft, faAngleRight,faPause } from '@fortawesome/free-solid-svg-icons';
 
