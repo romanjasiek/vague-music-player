@@ -1,0 +1,33 @@
+.footer-menu {
+    background-color: $color-secondary-dark;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.4rem;
+    border-top: 1px solid;
+    border-color: #6e6e6e;
+    color: #6e6e6e;
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer-menu a {
+    color: #6e6e6e;
+    text-decoration: none;
+    transition: color 2s ease-in-out;
+  }
+  
+  .footer-menu a:hover {
+    color: $color-primary;
+    transition: all 0s;
+  }
+
+  .footer-icon {
+    color: $color-primary;
+  }

@@ -4,7 +4,8 @@ import './styles/app.scss';
 // Adding components
 import Player from './components/Player';
 import Song from './components/Song';
-import Nav from './components/Nav'
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 // Importing Songs
 import data from './data';
 import Library from './components/Library';
@@ -65,6 +66,7 @@ function App() {
         libraryStatus={libraryStatus}
 
         />
+        <Footer />
       <audio 
                 onTimeUpdate={timeUpdateHandler}
                 onLoadedMetadata={timeUpdateHandler}
