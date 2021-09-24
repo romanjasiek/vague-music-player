@@ -3,6 +3,7 @@ import React from 'react';
 const Song = ({currentSong}) => {
     return(
         <>
+        <div class="vinyl-container">
         <div className="case">
 	            <div className="overlay"></div>
 	                <img className="cover" src={currentSong.cover} alt={currentSong.name +" by " + currentSong.artist}/>
@@ -10,6 +11,7 @@ const Song = ({currentSong}) => {
 		    <div class="slot"></div>
 	        </div>
 	        <div className="vinyl"></div>
+        </div>
         </div>
         <div className="song-container">
             <h2>{currentSong.name}</h2>
