@@ -18,7 +18,7 @@
     "sass": "^1.41.1",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.12",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.2"
   },
   "scripts": {
     "predeploy": "npm run build",
