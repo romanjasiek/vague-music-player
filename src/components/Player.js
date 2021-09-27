@@ -106,7 +106,7 @@ const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, s
                     />
                 <FontAwesomeIcon 
                     // onClick={shuffleSongs}
-                    className="play" size="2x"
+                    className="random" size="2x"
                     icon={faRandom}
                     />
                 <FontAwesomeIcon 
