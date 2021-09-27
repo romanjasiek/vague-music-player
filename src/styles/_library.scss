@@ -18,7 +18,7 @@
         text-shadow: 0 0 0.5rem black;
         padding: 2rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     h3{
         color: $color-default-lightgray;
@@ -94,6 +94,7 @@
 }
 
 .close-button{
+    filter: drop-shadow(0 0 0.2rem black);
     margin-top: 7px;
     opacity: 1;
     transform: translateX(-100%);

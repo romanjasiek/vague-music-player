@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faAngleLeft, faAngleRight,faPause, faRandom } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faAngleLeft, faAngleRight,faPause, faRandom, faRedo } from '@fortawesome/free-solid-svg-icons';
 
 const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, songInfo, songs, setCurrentSong, setSongs }) => {
 
@@ -43,6 +43,23 @@ const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, s
     //         }
     //     }
     //   };
+
+    const repeatSong = () => {
+        let myAudio = audioRef.current.play;
+        myAudio = new Audio(currentSong); 
+        if (typeof myAudio.loop == 'boolean')
+        {
+            myAudio.loop = true;
+        }
+        else
+        {
+            myAudio.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+            }, false);
+        }
+        myAudio.play();
+    }
 
     const getTime = (time) => {
         return(
@@ -105,13 +122,18 @@ const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, s
                     icon={isPlaying ? faPause : faPlay}
                     />
                 <FontAwesomeIcon 
-                    // onClick={shuffleSongs}
-                    className="random" size="2x"
-                    icon={faRandom}
-                    />
-                <FontAwesomeIcon 
                     onClick={() => {skipTrackHandler('skip-forward')}} 
                     className="skip-forward" size="2x" icon={faAngleRight} />
+                <FontAwesomeIcon 
+                    // onClick={shuffleSongs}
+                    className="random-repeat" size="2x"
+                    icon={faRandom}
+                />
+                <FontAwesomeIcon 
+                    onClick={repeatSong}
+                    className="random-repeat" size="2x"
+                    icon={faRedo}
+                />
             </div>
         </div>
     );
