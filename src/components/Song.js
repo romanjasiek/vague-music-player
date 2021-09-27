@@ -3,12 +3,12 @@ import React from 'react';
 const Song = ({currentSong}) => {
     return(
         <>
-        <div class="vinyl-container">
+        <div className="vinyl-container">
         <div className="case">
 	            <div className="overlay"></div>
 	                <img className="cover" src={currentSong.cover} alt={currentSong.name +" by " + currentSong.artist}/>
-			    <div class="slotwrapper">
-		    <div class="slot"></div>
+			    <div className="slotwrapper">
+		    <div className="slot"></div>
 	        </div>
 	        <div className="vinyl"></div>
         </div>

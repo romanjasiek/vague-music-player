@@ -32,7 +32,7 @@ import OceanViewCover from './music/g-mills_kyle-mcevoy_lukeotwell/g-mills_kyle-
 import UnderTheCityStars from './music/aso_middle-school_aviino/aso_middle-school_aviino_under-the-city-stars.mp3';
 import UnderTheCityStarsCover from './music/aso_middle-school_aviino/aso_middle-school_aviino_under-the-city-stars.jpg';
 
-function chillHop() {
+function mixTape() {
     return [
         {
             name: "Rest Until Dark",
@@ -224,4 +224,4 @@ function chillHop() {
     ]
 }
 
-export default chillHop;
+export default mixTape;

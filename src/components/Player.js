@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faAngleLeft, faAngleRight,faPause } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faAngleLeft, faAngleRight,faPause, faRandom } from '@fortawesome/free-solid-svg-icons';
 
 const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, songInfo, songs, setCurrentSong, setSongs }) => {
 
@@ -33,6 +33,16 @@ const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, s
             setIsPlaying(!isPlaying);
         }
     }
+
+    // Shuffle songs
+    // const shuffleSongs = () => {
+    //     function shuffleArray(array) {
+    //         for (let i = array.length - 1; i > 0; i--) {
+    //             const j = Math.floor(Math.random() * (i + 1));
+    //             [array[i], array[j]] = [array[j], array[i]];
+    //         }
+    //     }
+    //   };
 
     const getTime = (time) => {
         return(
@@ -93,6 +103,11 @@ const Player = ({ audioRef, currentSong, isPlaying, setIsPlaying, setSongInfo, s
                     onClick={playSongHandler}
                     className="play" size="2x"
                     icon={isPlaying ? faPause : faPlay}
+                    />
+                <FontAwesomeIcon 
+                    // onClick={shuffleSongs}
+                    className="play" size="2x"
+                    icon={faRandom}
                     />
                 <FontAwesomeIcon 
                     onClick={() => {skipTrackHandler('skip-forward')}} 
