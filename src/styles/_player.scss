@@ -35,7 +35,9 @@
     color: $color-primary;
     svg {
         cursor: pointer;
-        
+        &:hover {
+          color: $color-primary-dark;
+        }
     }
 }
 
@@ -90,4 +92,7 @@
 
   .random-repeat {
     color: $color-default-darkgray;
+    &:hover {
+      color: $color-primary-dark;
+    }
   }
