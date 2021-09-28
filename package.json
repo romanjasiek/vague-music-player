@@ -1,7 +1,7 @@
 {
   "name": "vague-music-player",
   "homepage": "https://romanjasiek.github.io/vague-music-player",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
