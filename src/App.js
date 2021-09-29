@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef,useEffect } from 'react';
 //Import styles
 import './styles/app.scss';
 // Adding components
@@ -14,6 +14,8 @@ function App() {
   // Ref
       const audioRef = useRef(null);
   // State
+  const [isRandom, setIsRandom] = useState(false);
+
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -24,6 +26,13 @@ function App() {
         })
   const [libraryStatus, setLibraryStatus] = useState(false);
 
+
+  let currentIndex =isRandom? getRandomInt(0, songs.length - 1) : songs.findIndex((song) => song.id === currentSong.id);
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
   const timeUpdateHandler = (e) => {
           const current = e.target.currentTime;
           const duration = e.target.duration;
@@ -36,8 +45,8 @@ function App() {
           setSongInfo({...songInfo, currentTime: current, duration, animationPercentage: animation })
         }
   const songEndHandler = async () => {
-    let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
-    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+
+    await setCurrentSong(songs[(isRandom?currentIndex:currentIndex + 1) % songs.length]);
     if(isPlaying) audioRef.current.play()
   }
 
@@ -55,6 +64,9 @@ function App() {
         songs={songs}
         setCurrentSong={setCurrentSong}
         setSongs={setSongs}
+        isRandom={isRandom}
+        setIsRandom={setIsRandom}
+        currentIndex={currentIndex}
 
       />
       <Library 

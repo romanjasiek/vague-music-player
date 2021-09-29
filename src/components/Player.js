@@ -19,6 +19,9 @@ const Player = ({
   songs,
   setCurrentSong,
   setSongs,
+  setIsRandom,
+  isRandom,
+  currentIndex
 }) => {
   const [isLoop, setIsLoop] = useState(false);
   const activeLibraryHandler = (nextPrev) => {
@@ -64,6 +67,23 @@ const Player = ({
   //     }
   //   };
 
+  /*const repeatSong = () => {
+    let myAudio = audioRef.current.play;
+    myAudio = new Audio(currentSong);
+    if (typeof myAudio.loop == "boolean") {
+      myAudio.loop = true;
+    } else {
+      myAudio.addEventListener(
+        "ended",
+        function () {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+    }
+    myAudio.play();
+  };*/
 
   const getTime = (time) => {
     return (
@@ -77,22 +97,22 @@ const Player = ({
   };
 
   const skipTrackHandler = async (direction) => {
-    let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+ 
     if (direction === "skip-forward") {
       // Find the actual index and add +1 to go to the next song. When matching the number of songs in the array, go back to 0
-      await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-      activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
+      await setCurrentSong(songs[(isRandom?currentIndex:currentIndex + 1) % songs.length]);
+      activeLibraryHandler(songs[(isRandom?currentIndex:currentIndex + 1) % songs.length]);
     }
     if (direction === "skip-back") {
       // Prevents crashing when skipping beyond the first song because we don't have a -1 index
-      if ((currentIndex - 1) % songs.length === -1) {
+      if ((isRandom?currentIndex:currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
         activeLibraryHandler(songs[songs.length - 1]);
         if (isPlaying) audioRef.current.play();
         return;
       }
-      await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
-      activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
+      await setCurrentSong(songs[(isRandom?currentIndex:currentIndex - 1) % songs.length]);
+      activeLibraryHandler(songs[(isRandom?currentIndex:currentIndex - 1) % songs.length]);
     }
     if (isPlaying) audioRef.current.play();
   };
@@ -147,10 +167,11 @@ const Player = ({
           icon={faAngleRight}
         />
         <FontAwesomeIcon
-          onClick={() => console.log("audioRef ==> ", audioRef.current)}
+          onClick={() => setIsRandom(!isRandom)}
           className="random-repeat"
           size="2x"
           icon={faRandom}
+          style={{ color: isRandom ? "#E9C46A" : "" }}
         />
         <FontAwesomeIcon
           onClick={() => setIsLoop(!isLoop)}
