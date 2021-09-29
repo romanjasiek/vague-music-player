@@ -25,7 +25,39 @@ function App() {
         animationPercentage: 0
         })
   const [libraryStatus, setLibraryStatus] = useState(false);
+  function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+  useEffect(()=>{
+    if(isRandom){
+      const randomIndex = getRandomInt(0, songs.length - 2)
+      setCurrentSong(songs[randomIndex])
+   
+      // reflected the songs randomly in library here
+      /**
+       setSongs(reflected the songs randomly)
+       */
+       setSongs(shuffle(data()))
+    }else{
+      setCurrentSong(songs[0])
+      setSongs(data())
+    }
 
+  },[isRandom])
 
   let currentIndex =isRandom? getRandomInt(0, songs.length - 1) : songs.findIndex((song) => song.id === currentSong.id);
   function getRandomInt(min, max) {

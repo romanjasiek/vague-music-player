@@ -4,7 +4,7 @@ A very basic music player including some free to use songs. This project is base
 
 ## Still needs to be done
 
-- Add a random play function
-- ~~Add a function to loop current song infinitely~~ (Done, Kudos to Ghassan Aldarwish!)
+- ~~Add a random play function~~ (Done, Kudos to Ghassan Aldarwish!)
+- ~~Add a function to loop current song infinitely~~ (Done, Kudos again to Ghassan Aldarwish!)
 - Add a volume control
 - ~~Add a button to close Library in mobile view~~
