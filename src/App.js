@@ -12,7 +12,8 @@ import Library from './components/Library';
 
 function App() {
   // Ref
-      const audioRef = useRef(null);
+ 
+  const audioRef = useRef(null);
   // State
   const [isRandom, setIsRandom] = useState(false);
 
@@ -25,6 +26,7 @@ function App() {
         animationPercentage: 0
         })
   const [libraryStatus, setLibraryStatus] = useState(false);
+
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -44,19 +46,44 @@ function App() {
   }
   useEffect(()=>{
     if(isRandom){
-      const randomIndex = getRandomInt(0, songs.length - 2)
-      setCurrentSong(songs[randomIndex])
-   
-      // reflected the songs randomly in library here
-      /**
-       setSongs(reflected the songs randomly)
-       */
-       setSongs(shuffle(data()))
-    }else{
-      setCurrentSong(songs[0])
-      setSongs(data())
-    }
 
+      const randomIndex = getRandomInt(0, songs.length - 1)
+      const current =  songs[randomIndex]
+  
+      const songsShuffle = shuffle(songs)?.map((song) =>{
+        if(song.id === current.id){
+            return{
+                ...song,
+                active: true
+            }
+        }else{
+            return{
+                ...song,
+                active: false
+            }
+        }
+    })
+       setSongs(songsShuffle)
+       setCurrentSong(current)
+    }else{
+      const current = songs[0]
+      const newSongs = songs.map((song) =>{
+        if(song.id === current.id){
+            return{
+                ...song,
+                active: true
+            }
+        }else{
+            return{
+                ...song,
+                active: false
+            }
+        }
+    })
+      setCurrentSong(current)
+      setSongs(newSongs)
+    }
+  
   },[isRandom])
 
   useEffect(()=>{
@@ -66,7 +93,9 @@ function App() {
         const activeElement = document.getElementById(activeId)
         activeElement.scrollIntoView({ behavior: 'smooth' })
     }
+
    },[songs])
+
 
   let currentIndex =isRandom? getRandomInt(0, songs.length - 1) : songs.findIndex((song) => song.id === currentSong.id);
   function getRandomInt(min, max) {
@@ -111,6 +140,7 @@ function App() {
 
       />
       <Library 
+        currentIndex={currentIndex}
         audioRef={audioRef}
         songs={songs}
         setCurrentSong={setCurrentSong} 
