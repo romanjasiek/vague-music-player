@@ -59,6 +59,15 @@ function App() {
 
   },[isRandom])
 
+  useEffect(()=>{
+    const activeSong = songs?.find((i)=>i.active == true)
+    const activeId = activeSong?.id
+    if(activeId){
+        const activeElement = document.getElementById(activeId)
+        activeElement.scrollIntoView({ behavior: 'smooth' })
+    }
+   },[songs])
+
   let currentIndex =isRandom? getRandomInt(0, songs.length - 1) : songs.findIndex((song) => song.id === currentSong.id);
   function getRandomInt(min, max) {
     min = Math.ceil(min);
