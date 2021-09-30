@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vague-music-player/static/css/main.25332f68.chunk.css",
-    "main.js": "/vague-music-player/static/js/main.259a0486.chunk.js",
-    "main.js.map": "/vague-music-player/static/js/main.259a0486.chunk.js.map",
+    "main.js": "/vague-music-player/static/js/main.95500d77.chunk.js",
+    "main.js.map": "/vague-music-player/static/js/main.95500d77.chunk.js.map",
     "runtime-main.js": "/vague-music-player/static/js/runtime-main.22f7e2e3.js",
     "runtime-main.js.map": "/vague-music-player/static/js/runtime-main.22f7e2e3.js.map",
     "static/js/2.029a835f.chunk.js": "/vague-music-player/static/js/2.029a835f.chunk.js",
@@ -50,6 +50,6 @@
     "static/js/runtime-main.22f7e2e3.js",
     "static/js/2.029a835f.chunk.js",
     "static/css/main.25332f68.chunk.css",
-    "static/js/main.259a0486.chunk.js"
+    "static/js/main.95500d77.chunk.js"
   ]
 }
