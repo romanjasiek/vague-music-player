@@ -31,6 +31,12 @@ import OceanView from './music/g-mills_kyle-mcevoy_lukeotwell/g-mills_kyle-mcevo
 import OceanViewCover from './music/g-mills_kyle-mcevoy_lukeotwell/g-mills_kyle-mcevoy_lukeotwell-ocean-view.jpg';
 import UnderTheCityStars from './music/aso_middle-school_aviino/aso_middle-school_aviino_under-the-city-stars.mp3';
 import UnderTheCityStarsCover from './music/aso_middle-school_aviino/aso_middle-school_aviino_under-the-city-stars.jpg';
+import Conflicted from './music/hanz/hanz_conflicted.mp3';
+import ConflictedCover from './music/hanz/hanz_conflicted.jpg';
+import WhereTheSunGoes from './music/delayde/delayde_anybodyy-where_the_sun_goes.mp3';
+import WhereTheSunGoesCover from './music/delayde/delayde_anybodyy-where_the_sun_goes.jpg';
+import PrairieTone from './music/yeti-music/yeti-music_prairie-tone.mp3';
+import PrairieToneCover from './music/yeti-music/yeti-music_prairie-tone.jpg';
 
 function mixTape() {
     return [
@@ -218,6 +224,39 @@ function mixTape() {
             link: "https://uppbeat.io/t/vens-adams/adventure-is-calling",
             audio: AdventureIsCalling,
             color: ['#FEF6DF','#9CB4D6'],
+            id: uuidv4(),
+            active: false
+        },
+        {
+            name: "Conflicted",
+            cover: ConflictedCover,
+            artist: "Hanz",
+            credits: "Hanz - Conflicted",
+            link: "https://chll.to/840d86cf",
+            audio: Conflicted,
+            color: ['#475671','#CE838B'],
+            id: uuidv4(),
+            active: false
+        },
+        {
+            name: "Where The Sun Goes",
+            cover: WhereTheSunGoesCover,
+            artist: "Delayde, anybodyy",
+            credits: "Delayde, anybodyy - Where The Sun Goes",
+            link: "https://chll.to/a710a02f",
+            audio: WhereTheSunGoes,
+            color: ['#6B37C4','#99D587'],
+            id: uuidv4(),
+            active: false
+        },
+        {
+            name: "Prairie Tone",
+            cover: PrairieToneCover,
+            artist: "Yeti Music",
+            credits: "Credits: Music from Uppbeat (free for Creators!). License code: SPTXPMV1CVOXWTIP",
+            link: "https://uppbeat.io/t/yeti-music/prairie-tone",
+            audio: PrairieTone,
+            color: ['#452D35','#648DAE'],
             id: uuidv4(),
             active: false
         }

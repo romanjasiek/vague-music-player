@@ -2,7 +2,7 @@
 
 A very basic music player including some free to use songs. This project is based on: https://github.com/developedbyed/music-player-react
 
-***Current version: 0.5.4***
+***Current version: 0.5.5***
 
 ## Additionally done
 
@@ -14,3 +14,7 @@ A very basic music player including some free to use songs. This project is base
 
 - Add a volume control
 - Fixing some small remaining bugs
+
+## Latest Updates:
+
+- `Version 0.5.5.: 3 new songs added`
