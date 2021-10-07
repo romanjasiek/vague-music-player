@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vague-music-player/static/css/main.25332f68.chunk.css",
-    "main.js": "/vague-music-player/static/js/main.b6f5aa5c.chunk.js",
-    "main.js.map": "/vague-music-player/static/js/main.b6f5aa5c.chunk.js.map",
+    "main.js": "/vague-music-player/static/js/main.03ff0b50.chunk.js",
+    "main.js.map": "/vague-music-player/static/js/main.03ff0b50.chunk.js.map",
     "runtime-main.js": "/vague-music-player/static/js/runtime-main.22f7e2e3.js",
     "runtime-main.js.map": "/vague-music-player/static/js/runtime-main.22f7e2e3.js.map",
     "static/js/2.c43afd1a.chunk.js": "/vague-music-player/static/js/2.c43afd1a.chunk.js",
@@ -24,10 +24,14 @@
     "static/media/babel-zayner-main-version-04-00-2158.01385a93.mp3": "/vague-music-player/static/media/babel-zayner-main-version-04-00-2158.01385a93.mp3",
     "static/media/big-dreams-simon-folwar-main-version-02-25-18020.8cf323bc.mp3": "/vague-music-player/static/media/big-dreams-simon-folwar-main-version-02-25-18020.8cf323bc.mp3",
     "static/media/clear-sky-hartzmann-main-version-02-20-18592.a18b60aa.mp3": "/vague-music-player/static/media/clear-sky-hartzmann-main-version-02-20-18592.a18b60aa.mp3",
+    "static/media/delayde_anybodyy-where_the_sun_goes.4f43b745.mp3": "/vague-music-player/static/media/delayde_anybodyy-where_the_sun_goes.4f43b745.mp3",
+    "static/media/delayde_anybodyy-where_the_sun_goes.ce09669b.jpg": "/vague-music-player/static/media/delayde_anybodyy-where_the_sun_goes.ce09669b.jpg",
     "static/media/edapollo_sundreamer-vhs-tapes-1993-1996.5edf5811.mp3": "/vague-music-player/static/media/edapollo_sundreamer-vhs-tapes-1993-1996.5edf5811.mp3",
     "static/media/edapollo_sundreamer-vhs-tapes-1993-1996.a7172604.jpg": "/vague-music-player/static/media/edapollo_sundreamer-vhs-tapes-1993-1996.a7172604.jpg",
     "static/media/g-mills_kyle-mcevoy_lukeotwell-ocean-view.3b1312c4.jpg": "/vague-music-player/static/media/g-mills_kyle-mcevoy_lukeotwell-ocean-view.3b1312c4.jpg",
     "static/media/g-mills_kyle-mcevoy_lukeotwell-ocean-view.6cd551dc.mp3": "/vague-music-player/static/media/g-mills_kyle-mcevoy_lukeotwell-ocean-view.6cd551dc.mp3",
+    "static/media/hanz_conflicted.4b2e4b26.mp3": "/vague-music-player/static/media/hanz_conflicted.4b2e4b26.mp3",
+    "static/media/hanz_conflicted.b049b132.jpg": "/vague-music-player/static/media/hanz_conflicted.b049b132.jpg",
     "static/media/mama-aiuto-today-feels-like-everyday.0662bda5.jpg": "/vague-music-player/static/media/mama-aiuto-today-feels-like-everyday.0662bda5.jpg",
     "static/media/mama-aiuto_today-feels-like-everyday.701b33ef.mp3": "/vague-music-player/static/media/mama-aiuto_today-feels-like-everyday.701b33ef.mp3",
     "static/media/mazko-seascape.5df771bf.jpg": "/vague-music-player/static/media/mazko-seascape.5df771bf.jpg",
@@ -44,12 +48,14 @@
     "static/media/the-kount_mazko_wayfare.8cd8b607.mp3": "/vague-music-player/static/media/the-kount_mazko_wayfare.8cd8b607.mp3",
     "static/media/the-kount_mazko_wayfare.e709358f.jpg": "/vague-music-player/static/media/the-kount_mazko_wayfare.e709358f.jpg",
     "static/media/vens-adams-avatar-v1_1721782353768003.391056c1.jpg": "/vague-music-player/static/media/vens-adams-avatar-v1_1721782353768003.391056c1.jpg",
+    "static/media/yeti-music_prairie-tone.f0bf8566.mp3": "/vague-music-player/static/media/yeti-music_prairie-tone.f0bf8566.mp3",
+    "static/media/yeti-music_prairie-tone.fac5b6db.jpg": "/vague-music-player/static/media/yeti-music_prairie-tone.fac5b6db.jpg",
     "static/media/zayner-avatar-v1_4284495953502456.4ab4b0b3.jpg": "/vague-music-player/static/media/zayner-avatar-v1_4284495953502456.4ab4b0b3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.22f7e2e3.js",
     "static/js/2.c43afd1a.chunk.js",
     "static/css/main.25332f68.chunk.css",
-    "static/js/main.b6f5aa5c.chunk.js"
+    "static/js/main.03ff0b50.chunk.js"
   ]
 }
